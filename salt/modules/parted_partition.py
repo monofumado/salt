@@ -469,7 +469,7 @@ def mkpart(device, part_type, fs_type=None, start=None, end=None):
             'Invalid part_type passed to partition.mkpart'
         )
 
-    if not _is_fstype(fs_type):
+    if fs_type and not _is_fstype(fs_type):
         raise CommandExecutionError(
             'Invalid fs_type passed to partition.mkpart'
         )
